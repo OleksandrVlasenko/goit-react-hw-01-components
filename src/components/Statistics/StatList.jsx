@@ -1,13 +1,21 @@
 import PropTypes from 'prop-types';
-import { StatItem } from 'components/Statistics/StatItem';
+import { StatItem, StastListEl } from 'components/Statistics/index';
+
 
 export const StatList = ({ stats }) => {
   return (
-    <ul className="stat-list">
+    <StastListEl>
       {stats.map(({ id, label, percentage }) => {
-        return <StatItem key={id} label={ label} percentage={percentage} />;
+        return (
+          <StatItem
+            key={id}
+            label={label}
+            percentage={percentage}
+            
+          />
+        );
       })}
-    </ul>
+    </StastListEl>
   );
 };
 

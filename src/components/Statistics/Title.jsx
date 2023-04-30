@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import { TitleEl } from 'components/Statistics/index';
 
 export const Title = ({ title }) => {
   if (title) {
-    return <h2 className="title">{title}</h2>;
+    return <TitleEl>{title}</TitleEl>;
   }
 };
 
